@@ -1,0 +1,46 @@
+{% extends 'template_clean.html' %}
+
+{% block title %}
+Login
+{% endblock %}
+
+
+{% block main %}
+<section class="container">
+
+    <div class="container text-center">
+        <div class="row align-items-center">
+        
+            <div class="col is-flex is-justify-content-center is-align-content-center">
+                <img src="{{ url_for('static', filename='img/system/tsm-logo.svg') }}" alt="" style="max-width: 50%; max-height: 50%; height: 75vh; overflow: hidden;">
+            </div>
+            <div class="col text-start">
+                <h1 class="title">Login</h1>
+                <p class="lead">
+                    Acesse seu painel ao fazer o login!
+                </p>
+                
+
+                <form action="" method="post">
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control form-label" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <input type="password" class="form-control form-label" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+
+                <hr>
+
+                <h6>Não possui conta? <a href="{{ url_for('register') }}">Registre Aqui!</a></h6>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
